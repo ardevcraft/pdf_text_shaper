@@ -1,0 +1,6 @@
+.dart_tool/
+build/
+.idea/
+*.iml
+pubspec.lock
+example/assets/fonts/
