@@ -1,0 +1,25 @@
+name: bangla_pdf_fixer_example
+description: Example for bangla_pdf_fixer
+
+publish_to: none
+
+environment:
+  sdk: ^3.13.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  bangla_pdf_fixer:
+    path: ../
+
+  pdf: ^3.13.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/fonts/NotoSansBengali-Regular.ttf
+    - assets/fonts/NotoSansBengali-Bold.ttf
+    - assets/fonts/NotoSans-Regular.ttf
+    - assets/fonts/NotoSans-Bold.ttf

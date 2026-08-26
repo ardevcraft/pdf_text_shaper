@@ -4,10 +4,10 @@ import 'package:pdf_text_shaper/pdf_text_shaper.dart';
 typedef BanglaTextStyle = ShapedTextStyle;
 typedef BanglaTextAlign = ShapedTextAlign;
 
-/// Unicode-first Bangla/Bengali text for `package:pdf`.
+/// Unicode-first Bengali text for `package:pdf`.
 ///
-/// Provide either a complete [style] or a [font] with convenience style
-/// arguments. Shaping/rendering is delegated to `pdf_text_shaper`.
+/// Provide either a complete [style] or a [font] with the convenience style
+/// arguments. Text shaping/rendering is delegated to `pdf_text_shaper`.
 class BanglaText extends ShapedText {
   BanglaText(
     super.text, {

@@ -79,12 +79,7 @@ final class BanglaBulletList extends pw.StatelessWidget {
                 ),
               ),
               pw.SizedBox(width: markerGap),
-              pw.Expanded(
-                child: BanglaText(
-                  items[index],
-                  style: textStyle,
-                ),
-              ),
+              pw.Expanded(child: BanglaText(items[index], style: textStyle)),
             ],
           ),
           if (index != items.length - 1) pw.SizedBox(height: spacing),

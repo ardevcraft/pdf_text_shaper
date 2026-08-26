@@ -94,12 +94,7 @@ final class BanglaRichText extends pw.StatelessWidget {
           );
 
       for (final part in parts) {
-        children.add(
-          BanglaText(
-            part,
-            style: spanStyle,
-          ),
-        );
+        children.add(BanglaText(part, style: spanStyle));
       }
     }
 

@@ -1,8 +1,8 @@
 /// Unicode-first Bangla/Bengali text rendering for `package:pdf`.
 ///
 /// Text shaping and glyph rendering are delegated to `pdf_text_shaper` and
-/// HarfBuzz. This package adds Flutter asset font loading and Bangla/Bengali-focused
-/// convenience widgets and text helpers.
+/// HarfBuzz. This package adds Flutter asset font loading, Bangla-focused
+/// convenience widgets, and migration helpers.
 library;
 
 export 'package:pdf_text_shaper/pdf_text_shaper.dart'

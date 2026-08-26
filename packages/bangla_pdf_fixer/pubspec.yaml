@@ -1,10 +1,10 @@
 name: bangla_pdf_fixer
 description: Unicode-first Bangla/Bengali PDF text shaping for Flutter, powered by pdf_text_shaper and HarfBuzz.
-version: 3.1.0
-homepage: https://github.com/ardevcraft/pdf_text_shaper
-repository: https://github.com/ardevcraft/pdf_text_shaper
-issue_tracker: https://github.com/ardevcraft/pdf_text_shaper/issues
-documentation: https://github.com/ardevcraft/pdf_text_shaper#readme
+version: 3.1.1
+homepage: https://github.com/ardevcraft/bangla_pdf_fixer
+repository: https://github.com/ardevcraft/bangla_pdf_fixer
+issue_tracker: https://github.com/ardevcraft/bangla_pdf_fixer/issues
+documentation: https://github.com/ardevcraft/bangla_pdf_fixer#readme
 environment:
   sdk: ^3.13.0
   flutter: '>=3.47.0'
@@ -33,3 +33,7 @@ topics:
   - pdf
   - unicode
   - typography
+
+screenshots:
+  - description: 'PDF Fixer Icon'
+    path: 'images/icon.png'
