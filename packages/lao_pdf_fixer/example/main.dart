@@ -6,7 +6,9 @@ import 'package:pdf/widgets.dart' as pw;
 
 Future<void> main(List<String> args) async {
   if (args.isEmpty) {
-    stderr.writeln('Usage: dart run example/main.dart /path/to/NotoSansLao-Regular.ttf');
+    stderr.writeln(
+      'Usage: dart run example/main.dart /path/to/NotoSansLao-Regular.ttf',
+    );
     exitCode = 64;
     return;
   }
@@ -22,11 +24,7 @@ Future<void> main(List<String> args) async {
         build: (_) => pw.Column(
           crossAxisAlignment: pw.CrossAxisAlignment.start,
           children: [
-            LaoHeader(
-              'Lao PDF shaping',
-              font: font,
-              fontSize: 24,
-            ),
+            LaoHeader('Lao PDF shaping', font: font, fontSize: 24),
             pw.SizedBox(height: 16),
             LaoParagraph(
               'ພາສາລາວ: ຂ້ອຍກຳລັງຂຽນພາສາລາວ.',

@@ -95,12 +95,7 @@ final class ArabicRichText extends pw.StatelessWidget {
           );
 
       for (final part in parts) {
-        children.add(
-          ArabicText(
-            part,
-            style: spanStyle,
-          ),
-        );
+        children.add(ArabicText(part, style: spanStyle));
       }
     }
 

@@ -6,7 +6,9 @@ import 'package:pdf/widgets.dart' as pw;
 
 Future<void> main(List<String> args) async {
   if (args.isEmpty) {
-    stderr.writeln('Usage: dart run example/main.dart /path/to/NotoSansMyanmar-Regular.ttf');
+    stderr.writeln(
+      'Usage: dart run example/main.dart /path/to/NotoSansMyanmar-Regular.ttf',
+    );
     exitCode = 64;
     return;
   }
@@ -44,7 +46,8 @@ Future<void> main(List<String> args) async {
       ),
     );
 
-    await File('myanmar_pdf_fixer_example.pdf').writeAsBytes(await document.save());
+    await File('myanmar_pdf_fixer_example.pdf')
+        .writeAsBytes(await document.save());
   } finally {
     font.dispose();
   }

@@ -1,0 +1,20 @@
+{
+  "assets": [
+    {
+      "encoding": {
+        "file": "/Users/arrahman/WorkSpace/pdf_text_shaper/.dart_tool/hooks_runner/shared/harfbuzz_ffi/build/9fb02c5622/libharfbuzz_ffi.dylib",
+        "id": "package:harfbuzz_ffi/src/ffi_bindings.g.dart",
+        "link_mode": {
+          "type": "dynamic_loading_bundle"
+        }
+      },
+      "type": "code_assets/code"
+    }
+  ],
+  "assets_for_linking": {},
+  "dependencies": [
+    "/Users/arrahman/.pub-cache/hosted/pub.dev/harfbuzz_ffi-0.5.0/third_party/harfbuzz/src/harfbuzz-world.cc"
+  ],
+  "status": "success",
+  "timestamp": "2026-11-07 16:56:19.000"
+}

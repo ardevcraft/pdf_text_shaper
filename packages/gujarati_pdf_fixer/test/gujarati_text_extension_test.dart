@@ -15,8 +15,14 @@ void main() {
     });
 
     test('strict script-only detection rejects Latin content', () {
-      expect('શિક્ષણ વિદ્યાર્થી પરીક્ષા સૂચના જવાબદારી ગુજરાત'.isGujaratiOnly, isTrue);
-      expect('ગુજરાતી: હું ગુજરાતીમાં લખું છું. English'.isGujaratiOnly, isFalse);
+      expect(
+        'શિક્ષણ વિદ્યાર્થી પરીક્ષા સૂચના જવાબદારી ગુજરાત'.isGujaratiOnly,
+        isTrue,
+      );
+      expect(
+        'ગુજરાતી: હું ગુજરાતીમાં લખું છું. English'.isGujaratiOnly,
+        isFalse,
+      );
       expect('   '.isGujaratiOnly, isFalse);
     });
   });

@@ -6,13 +6,18 @@ import 'package:pdf/widgets.dart' as pw;
 
 Future<void> main(List<String> args) async {
   if (args.isEmpty) {
-    stderr.writeln('Usage: dart run example/main.dart /path/to/NotoSansGurmukhi-Regular.ttf');
+    stderr.writeln(
+      'Usage: dart run example/main.dart /path/to/NotoSansGurmukhi-Regular.ttf',
+    );
     exitCode = 64;
     return;
   }
 
   final fontBytes = await File(args.first).readAsBytes();
-  final font = ShapedFont.fromBytes(fontBytes, name: 'Punjabi (Gurmukhi) example');
+  final font = ShapedFont.fromBytes(
+    fontBytes,
+    name: 'Punjabi (Gurmukhi) example',
+  );
 
   try {
     final document = pw.Document();
@@ -44,7 +49,8 @@ Future<void> main(List<String> args) async {
       ),
     );
 
-    await File('punjabi_pdf_fixer_example.pdf').writeAsBytes(await document.save());
+    await File('punjabi_pdf_fixer_example.pdf')
+        .writeAsBytes(await document.save());
   } finally {
     font.dispose();
   }

@@ -94,12 +94,7 @@ final class LaoRichText extends pw.StatelessWidget {
           );
 
       for (final part in parts) {
-        children.add(
-          LaoText(
-            part,
-            style: spanStyle,
-          ),
-        );
+        children.add(LaoText(part, style: spanStyle));
       }
     }
 

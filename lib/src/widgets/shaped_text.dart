@@ -239,6 +239,7 @@ class ShapedText extends pw.Widget with pw.SpanningWidget {
 
   List<_SourceRun> _segment(String source) {
     final fonts = style.fonts;
+    final runes = source.runes.toList(growable: false);
     final result = <_SourceRun>[];
 
     StringBuffer? buffer;
@@ -265,16 +266,22 @@ class ShapedText extends pw.Widget with pw.SpanningWidget {
       currentIsRightToLeft = false;
     }
 
-    for (final rune in source.runes) {
+    for (var runeIndex = 0; runeIndex < runes.length; runeIndex++) {
+      final rune = runes[runeIndex];
+      final isNumericRunCharacter =
+          HarfBuzzUnicodeProperties.isNumericRunCharacter(runes, runeIndex);
       final raw = HarfBuzzUnicodeProperties.ofRune(rune);
-      final effectiveTag = raw.isCommon || raw.isInherited
+      final isScriptNeutral = raw.isCommon || raw.isInherited;
+      final effectiveTag = isScriptNeutral || isNumericRunCharacter
           ? inheritedScriptTag ?? raw.tag
           : raw.tag;
-      final effectiveRtl = raw.isCommon || raw.isInherited
+      final effectiveRtl = isNumericRunCharacter
+          ? false
+          : isScriptNeutral
           ? inheritedIsRightToLeft
           : raw.isRightToLeft;
 
-      if (raw.isStrong) {
+      if (raw.isStrong && !isNumericRunCharacter) {
         inheritedScriptTag = raw.tag;
         inheritedIsRightToLeft = raw.isRightToLeft;
       }
@@ -289,6 +296,7 @@ class ShapedText extends pw.Widget with pw.SpanningWidget {
       final shouldSplit =
           buffer != null &&
           (currentFont != selectedFont ||
+              currentIsRightToLeft != effectiveRtl ||
               (currentScriptTag != null &&
                   effectiveTag != currentScriptTag &&
                   raw.isStrong));

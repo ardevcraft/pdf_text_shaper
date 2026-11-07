@@ -94,12 +94,7 @@ final class HindiRichText extends pw.StatelessWidget {
           );
 
       for (final part in parts) {
-        children.add(
-          HindiText(
-            part,
-            style: spanStyle,
-          ),
-        );
+        children.add(HindiText(part, style: spanStyle));
       }
     }
 

@@ -14,11 +14,14 @@ final class ShapedFont {
     required this.name,
     required Uint8List bytes,
     required this.pdfFont,
-    required this._blob,
-    required this._face,
-    required this._hbFont,
+    required Pointer<hb.hb_blob_t> blob,
+    required Pointer<hb.hb_face_t> face,
+    required Pointer<hb.hb_font_t> hbFont,
     required this.metrics,
-  }) : _bytes = Uint8List.fromList(bytes),
+  }) : _blob = blob,
+       _face = face,
+       _hbFont = hbFont,
+       _bytes = Uint8List.fromList(bytes),
        _outlineExtractor = HarfBuzzGlyphOutlineExtractor();
 
   factory ShapedFont.fromBytes(

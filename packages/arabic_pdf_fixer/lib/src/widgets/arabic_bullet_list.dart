@@ -70,12 +70,7 @@ final class ArabicBulletList extends pw.StatelessWidget {
           pw.Row(
             crossAxisAlignment: pw.CrossAxisAlignment.start,
             children: [
-              pw.Expanded(
-                child: ArabicText(
-                  items[index],
-                  style: textStyle,
-                ),
-              ),
+              pw.Expanded(child: ArabicText(items[index], style: textStyle)),
               pw.SizedBox(width: markerGap),
               pw.Container(
                 width: markerSize,

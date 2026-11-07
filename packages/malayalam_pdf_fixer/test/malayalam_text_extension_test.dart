@@ -16,7 +16,10 @@ void main() {
 
     test('strict script-only detection rejects Latin content', () {
       expect('മലയാളം'.isMalayalamOnly, isTrue);
-      expect('മലയാളം: ഞാൻ മലയാളത്തിൽ എഴുതുന്നു. English'.isMalayalamOnly, isFalse);
+      expect(
+        'മലയാളം: ഞാൻ മലയാളത്തിൽ എഴുതുന്നു. English'.isMalayalamOnly,
+        isFalse,
+      );
       expect('   '.isMalayalamOnly, isFalse);
     });
   });

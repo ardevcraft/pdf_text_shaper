@@ -94,12 +94,7 @@ final class TeluguRichText extends pw.StatelessWidget {
           );
 
       for (final part in parts) {
-        children.add(
-          TeluguText(
-            part,
-            style: spanStyle,
-          ),
-        );
+        children.add(TeluguText(part, style: spanStyle));
       }
     }
 

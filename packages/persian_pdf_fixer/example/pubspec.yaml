@@ -1,0 +1,28 @@
+name: persian_pdf_fixer_example
+description: Single-screen macOS test app for Persian PDF shaping.
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.0
+  flutter: '>=3.47.0'
+
+dependencies:
+  file_selector: ^1.1.0
+  flutter:
+    sdk: flutter
+  pdf: ^3.13.0
+  persian_pdf_fixer:
+    path: ..
+  printing: ^5.15.1
+  url_launcher: ^6.3.3
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+
+dependency_overrides:
+  pdf_text_shaper:
+    path: ../../../
+
+flutter:
+  uses-material-design: true

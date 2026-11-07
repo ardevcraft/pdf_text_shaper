@@ -15,8 +15,14 @@ void main() {
     });
 
     test('strict script-only detection rejects Latin content', () {
-      expect('విద్య విద్యార్థి పరీక్ష ప్రకటన బాధ్యత తెలుగు'.isTeluguOnly, isTrue);
-      expect('తెలుగు: నేను తెలుగులో వ్రాస్తున్నాను. English'.isTeluguOnly, isFalse);
+      expect(
+        'విద్య విద్యార్థి పరీక్ష ప్రకటన బాధ్యత తెలుగు'.isTeluguOnly,
+        isTrue,
+      );
+      expect(
+        'తెలుగు: నేను తెలుగులో వ్రాస్తున్నాను. English'.isTeluguOnly,
+        isFalse,
+      );
       expect('   '.isTeluguOnly, isFalse);
     });
   });

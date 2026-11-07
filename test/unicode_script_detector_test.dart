@@ -29,6 +29,20 @@ void main() {
       );
     });
 
+    test(
+      'Persian and Arabic-Indic digits do not set the first strong script',
+      () {
+        expect(
+          UnicodeScriptDetector.firstStrongScript('۱۲۳۴۵'),
+          UnicodeScript.common,
+        );
+        expect(
+          UnicodeScriptDetector.firstStrongScript('١٢٣ English'),
+          UnicodeScript.latin,
+        );
+      },
+    );
+
     test('recognizes RTL scripts', () {
       expect(UnicodeScript.arabic.isRightToLeft, isTrue);
       expect(UnicodeScript.hebrew.isRightToLeft, isTrue);

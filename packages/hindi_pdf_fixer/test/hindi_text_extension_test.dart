@@ -15,7 +15,10 @@ void main() {
     });
 
     test('strict script-only detection rejects Latin content', () {
-      expect('क्षत्रिय नियुक्ति प्राधिकारी शिक्षा संस्कृति परीक्षा'.isHindiOnly, isTrue);
+      expect(
+        'क्षत्रिय नियुक्ति प्राधिकारी शिक्षा संस्कृति परीक्षा'.isHindiOnly,
+        isTrue,
+      );
       expect('हिन्दी: मैं हिंदी में लिख रहा हूँ। English'.isHindiOnly, isFalse);
       expect('   '.isHindiOnly, isFalse);
     });

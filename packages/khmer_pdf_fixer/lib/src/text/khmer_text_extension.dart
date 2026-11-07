@@ -22,12 +22,13 @@ extension KhmerTextExtension on String {
 
   /// Migration bridge for applications that previously transformed text.
   /// Unicode shaping requires the original string, so this is an identity.
-  @Deprecated('Unicode shaping needs the original text. Pass the string directly.')
+  @Deprecated(
+    'Unicode shaping needs the original text. Pass the string directly.',
+  )
   String get fix => this;
 
   static bool _isKhmerRune(int rune) =>
-      (rune >= 0x1780 && rune <= 0x17FF) ||
-      (rune >= 0x19E0 && rune <= 0x19FF);
+      (rune >= 0x1780 && rune <= 0x17FF) || (rune >= 0x19E0 && rune <= 0x19FF);
 
   static bool _isWhitespace(int rune) =>
       rune == 0x09 || rune == 0x0A || rune == 0x0D || rune == 0x20;

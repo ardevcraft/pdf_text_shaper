@@ -94,12 +94,7 @@ final class SinhalaRichText extends pw.StatelessWidget {
           );
 
       for (final part in parts) {
-        children.add(
-          SinhalaText(
-            part,
-            style: spanStyle,
-          ),
-        );
+        children.add(SinhalaText(part, style: spanStyle));
       }
     }
 

@@ -15,8 +15,14 @@ void main() {
     });
 
     test('strict script-only detection rejects Latin content', () {
-      expect('ಶಿಕ್ಷಣ ವಿದ್ಯಾರ್ಥಿ ಪರೀಕ್ಷೆ ಪ್ರಕಟಣೆ ಜವಾಬ್ದಾರಿ ಕರ್ನಾಟಕ'.isKannadaOnly, isTrue);
-      expect('ಕನ್ನಡ: ನಾನು ಕನ್ನಡದಲ್ಲಿ ಬರೆಯುತ್ತಿದ್ದೇನೆ. English'.isKannadaOnly, isFalse);
+      expect(
+        'ಶಿಕ್ಷಣ ವಿದ್ಯಾರ್ಥಿ ಪರೀಕ್ಷೆ ಪ್ರಕಟಣೆ ಜವಾಬ್ದಾರಿ ಕರ್ನಾಟಕ'.isKannadaOnly,
+        isTrue,
+      );
+      expect(
+        'ಕನ್ನಡ: ನಾನು ಕನ್ನಡದಲ್ಲಿ ಬರೆಯುತ್ತಿದ್ದೇನೆ. English'.isKannadaOnly,
+        isFalse,
+      );
       expect('   '.isKannadaOnly, isFalse);
     });
   });

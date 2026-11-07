@@ -79,12 +79,7 @@ final class ThaiBulletList extends pw.StatelessWidget {
                 ),
               ),
               pw.SizedBox(width: markerGap),
-              pw.Expanded(
-                child: ThaiText(
-                  items[index],
-                  style: textStyle,
-                ),
-              ),
+              pw.Expanded(child: ThaiText(items[index], style: textStyle)),
             ],
           ),
           if (index != items.length - 1) pw.SizedBox(height: spacing),

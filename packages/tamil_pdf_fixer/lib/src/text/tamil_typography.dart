@@ -33,9 +33,7 @@ final class TamilTypography {
   }) {
     return ShapedTextStyle(
       font: bold ? boldFont ?? regularFont : regularFont,
-      fallbackFonts: bold
-          ? boldFallbackFonts ?? fallbackFonts
-          : fallbackFonts,
+      fallbackFonts: bold ? boldFallbackFonts ?? fallbackFonts : fallbackFonts,
       fontSize: fontSize,
       color: color ?? defaultColor,
       lineHeight: lineHeight,

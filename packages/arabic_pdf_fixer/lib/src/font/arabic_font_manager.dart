@@ -35,11 +35,7 @@ final class ArabicFontManager {
       return cached;
     }
 
-    final future = _loadAsset(
-      assetPath,
-      bundle: effectiveBundle,
-      name: name,
-    );
+    final future = _loadAsset(assetPath, bundle: effectiveBundle, name: name);
 
     _cache[key] = future;
 
@@ -59,9 +55,7 @@ final class ArabicFontManager {
     AssetBundle? bundle,
   }) {
     return Future.wait(
-      assetPaths.map(
-        (path) => loadAsset(path, bundle: bundle),
-      ),
+      assetPaths.map((path) => loadAsset(path, bundle: bundle)),
     );
   }
 
@@ -70,30 +64,18 @@ final class ArabicFontManager {
     required String defaultFontAsset,
     AssetBundle? bundle,
   }) {
-    return loadAsset(
-      defaultFontAsset,
-      bundle: bundle,
-      name: 'Arabic default',
-    );
+    return loadAsset(defaultFontAsset, bundle: bundle, name: 'Arabic default');
   }
 
   /// Returns whether an asset is currently cached.
-  bool isCached(
-    String assetPath, {
-    AssetBundle? bundle,
-  }) {
-    return _cache.containsKey(
-      _AssetFontKey(bundle ?? rootBundle, assetPath),
-    );
+  bool isCached(String assetPath, {AssetBundle? bundle}) {
+    return _cache.containsKey(_AssetFontKey(bundle ?? rootBundle, assetPath));
   }
 
   /// Removes and disposes one cached font.
   ///
   /// Returns `true` when a cache entry existed.
-  Future<bool> evict(
-    String assetPath, {
-    AssetBundle? bundle,
-  }) async {
+  Future<bool> evict(String assetPath, {AssetBundle? bundle}) async {
     final future = _cache.remove(
       _AssetFontKey(bundle ?? rootBundle, assetPath),
     );
@@ -142,10 +124,7 @@ final class ArabicFontManager {
     final data = await bundle.load(assetPath);
 
     return ShapedFont.fromBytes(
-      data.buffer.asUint8List(
-        data.offsetInBytes,
-        data.lengthInBytes,
-      ),
+      data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes),
       name: name ?? assetPath,
     );
   }

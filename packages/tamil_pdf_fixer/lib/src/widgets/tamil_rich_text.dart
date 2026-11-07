@@ -94,12 +94,7 @@ final class TamilRichText extends pw.StatelessWidget {
           );
 
       for (final part in parts) {
-        children.add(
-          TamilText(
-            part,
-            style: spanStyle,
-          ),
-        );
+        children.add(TamilText(part, style: spanStyle));
       }
     }
 

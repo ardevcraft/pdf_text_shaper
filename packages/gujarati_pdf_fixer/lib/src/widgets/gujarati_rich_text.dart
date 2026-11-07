@@ -94,12 +94,7 @@ final class GujaratiRichText extends pw.StatelessWidget {
           );
 
       for (final part in parts) {
-        children.add(
-          GujaratiText(
-            part,
-            style: spanStyle,
-          ),
-        );
+        children.add(GujaratiText(part, style: spanStyle));
       }
     }
 

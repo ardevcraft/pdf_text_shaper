@@ -6,7 +6,9 @@ import 'package:pdf/widgets.dart' as pw;
 
 Future<void> main(List<String> args) async {
   if (args.isEmpty) {
-    stderr.writeln('Usage: dart run example/main.dart /path/to/NotoSansKannada-Regular.ttf');
+    stderr.writeln(
+      'Usage: dart run example/main.dart /path/to/NotoSansKannada-Regular.ttf',
+    );
     exitCode = 64;
     return;
   }
@@ -22,11 +24,7 @@ Future<void> main(List<String> args) async {
         build: (_) => pw.Column(
           crossAxisAlignment: pw.CrossAxisAlignment.start,
           children: [
-            KannadaHeader(
-              'Kannada PDF shaping',
-              font: font,
-              fontSize: 24,
-            ),
+            KannadaHeader('Kannada PDF shaping', font: font, fontSize: 24),
             pw.SizedBox(height: 16),
             KannadaParagraph(
               'ಕನ್ನಡ: ನಾನು ಕನ್ನಡದಲ್ಲಿ ಬರೆಯುತ್ತಿದ್ದೇನೆ.',
@@ -44,7 +42,8 @@ Future<void> main(List<String> args) async {
       ),
     );
 
-    await File('kannada_pdf_fixer_example.pdf').writeAsBytes(await document.save());
+    await File('kannada_pdf_fixer_example.pdf')
+        .writeAsBytes(await document.save());
   } finally {
     font.dispose();
   }

@@ -94,12 +94,7 @@ final class KannadaRichText extends pw.StatelessWidget {
           );
 
       for (final part in parts) {
-        children.add(
-          KannadaText(
-            part,
-            style: spanStyle,
-          ),
-        );
+        children.add(KannadaText(part, style: spanStyle));
       }
     }
 

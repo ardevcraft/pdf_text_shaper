@@ -94,12 +94,7 @@ final class PunjabiRichText extends pw.StatelessWidget {
           );
 
       for (final part in parts) {
-        children.add(
-          PunjabiText(
-            part,
-            style: spanStyle,
-          ),
-        );
+        children.add(PunjabiText(part, style: spanStyle));
       }
     }
 

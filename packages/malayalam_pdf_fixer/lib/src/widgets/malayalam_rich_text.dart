@@ -94,12 +94,7 @@ final class MalayalamRichText extends pw.StatelessWidget {
           );
 
       for (final part in parts) {
-        children.add(
-          MalayalamText(
-            part,
-            style: spanStyle,
-          ),
-        );
+        children.add(MalayalamText(part, style: spanStyle));
       }
     }
 

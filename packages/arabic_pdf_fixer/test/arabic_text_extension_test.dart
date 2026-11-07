@@ -15,7 +15,10 @@ void main() {
     });
 
     test('strict script-only detection rejects Latin content', () {
-      expect('مرحبا بالعالم التعليم الطالب الاختبار والإعلان'.isArabicOnly, isTrue);
+      expect(
+        'مرحبا بالعالم التعليم الطالب الاختبار والإعلان'.isArabicOnly,
+        isTrue,
+      );
       expect('العربية: أنا أكتب باللغة العربية. English'.isArabicOnly, isFalse);
       expect('   '.isArabicOnly, isFalse);
     });

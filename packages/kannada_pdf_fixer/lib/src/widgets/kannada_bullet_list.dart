@@ -79,12 +79,7 @@ final class KannadaBulletList extends pw.StatelessWidget {
                 ),
               ),
               pw.SizedBox(width: markerGap),
-              pw.Expanded(
-                child: KannadaText(
-                  items[index],
-                  style: textStyle,
-                ),
-              ),
+              pw.Expanded(child: KannadaText(items[index], style: textStyle)),
             ],
           ),
           if (index != items.length - 1) pw.SizedBox(height: spacing),

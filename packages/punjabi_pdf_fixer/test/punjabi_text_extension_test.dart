@@ -15,8 +15,14 @@ void main() {
     });
 
     test('strict script-only detection rejects Latin content', () {
-      expect('ਸਿੱਖਿਆ ਵਿਦਿਆਰਥੀ ਪ੍ਰੀਖਿਆ ਸੂਚਨਾ ਜ਼ਿੰਮੇਵਾਰੀ ਪੰਜਾਬ'.isPunjabiOnly, isTrue);
-      expect('ਪੰਜਾਬੀ: ਮੈਂ ਪੰਜਾਬੀ ਵਿੱਚ ਲਿਖ ਰਿਹਾ ਹਾਂ। English'.isPunjabiOnly, isFalse);
+      expect(
+        'ਸਿੱਖਿਆ ਵਿਦਿਆਰਥੀ ਪ੍ਰੀਖਿਆ ਸੂਚਨਾ ਜ਼ਿੰਮੇਵਾਰੀ ਪੰਜਾਬ'.isPunjabiOnly,
+        isTrue,
+      );
+      expect(
+        'ਪੰਜਾਬੀ: ਮੈਂ ਪੰਜਾਬੀ ਵਿੱਚ ਲਿਖ ਰਿਹਾ ਹਾਂ। English'.isPunjabiOnly,
+        isFalse,
+      );
       expect('   '.isPunjabiOnly, isFalse);
     });
   });

@@ -94,12 +94,7 @@ final class KhmerRichText extends pw.StatelessWidget {
           );
 
       for (final part in parts) {
-        children.add(
-          KhmerText(
-            part,
-            style: spanStyle,
-          ),
-        );
+        children.add(KhmerText(part, style: spanStyle));
       }
     }
 

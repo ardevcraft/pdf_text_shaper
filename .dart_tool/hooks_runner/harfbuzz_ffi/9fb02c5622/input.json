@@ -1,0 +1,24 @@
+{
+  "assets": {},
+  "config": {
+    "build_asset_types": [
+      "code_assets/code"
+    ],
+    "extensions": {
+      "code_assets": {
+        "link_mode_preference": "dynamic",
+        "macos": {
+          "target_version": 12
+        },
+        "target_architecture": "arm64",
+        "target_os": "macos"
+      }
+    },
+    "linking_enabled": false
+  },
+  "out_dir_shared": "/Users/arrahman/WorkSpace/pdf_text_shaper/.dart_tool/hooks_runner/shared/harfbuzz_ffi/build/",
+  "out_file": "/Users/arrahman/WorkSpace/pdf_text_shaper/.dart_tool/hooks_runner/harfbuzz_ffi/9fb02c5622/output.json",
+  "package_name": "harfbuzz_ffi",
+  "package_root": "/Users/arrahman/.pub-cache/hosted/pub.dev/harfbuzz_ffi-0.5.0/",
+  "user_defines": {}
+}

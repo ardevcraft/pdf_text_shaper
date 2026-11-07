@@ -94,12 +94,7 @@ final class MyanmarRichText extends pw.StatelessWidget {
           );
 
       for (final part in parts) {
-        children.add(
-          MyanmarText(
-            part,
-            style: spanStyle,
-          ),
-        );
+        children.add(MyanmarText(part, style: spanStyle));
       }
     }
 

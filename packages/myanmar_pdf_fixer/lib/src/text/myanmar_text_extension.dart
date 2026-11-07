@@ -22,7 +22,9 @@ extension MyanmarTextExtension on String {
 
   /// Migration bridge for applications that previously transformed text.
   /// Unicode shaping requires the original string, so this is an identity.
-  @Deprecated('Unicode shaping needs the original text. Pass the string directly.')
+  @Deprecated(
+    'Unicode shaping needs the original text. Pass the string directly.',
+  )
   String get fix => this;
 
   static bool _isMyanmarRune(int rune) =>

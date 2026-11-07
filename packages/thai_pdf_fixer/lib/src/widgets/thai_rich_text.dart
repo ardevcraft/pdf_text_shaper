@@ -94,12 +94,7 @@ final class ThaiRichText extends pw.StatelessWidget {
           );
 
       for (final part in parts) {
-        children.add(
-          ThaiText(
-            part,
-            style: spanStyle,
-          ),
-        );
+        children.add(ThaiText(part, style: spanStyle));
       }
     }
 

@@ -1,8 +1,17 @@
-# pdf_text_shaper
 
-HarfBuzz-powered complex-script text shaping for Dart's [`pdf`](https://pub.dev/packages/pdf) package.
+<div align="center">
+  <a href="https://github.com/ardevcraft/pdf_text_shaper">
+    <img
+      src="https://raw.githubusercontent.com/ardevcraft/pdf_text_shaper/main/images/icon.jpg"
+      alt="pdf_text_shaper icon"
+      width="128"
+    >
+  </a>
+  <h1>pdf_text_shaper</h1>
+</div>
+Complex-script text shaping for Dart’s [`pdf`](https://pub.dev/packages/pdf) package, powered by HarfBuzz.
 
-`pdf_text_shaper` is for text that cannot be rendered correctly by simple Unicode-codepoint-to-glyph mapping: Bengali, Devanagari, Tamil, Telugu, Malayalam, Kannada, Gujarati, Gurmukhi, Arabic, Hebrew, Thai, Khmer, Myanmar, Sinhala, Tibetan, and other scripts supported by HarfBuzz and by the font you provide.
+Use `pdf_text_shaper` to render scripts that need contextual glyph shaping, ligatures, or precise mark positioning. It supports Bengali, Devanagari, Tamil, Telugu, Malayalam, Kannada, Gujarati, Gurmukhi, Arabic and Persian, Hebrew, Thai, Khmer, Myanmar, Sinhala, Tibetan, and other scripts supported by HarfBuzz and the font you provide.
 
 ## Why
 
@@ -52,7 +61,7 @@ final document = pw.Document();
 document.addPage(
   pw.Page(
     build: (_) => ShapedText(
-      'আমি বাংলায় লিখছি।',
+      'বিশ্বাস মূলত প্রয়োজন আর আশার দত্তকসন্তান।',
       style: ShapedTextStyle(
         font: font,
         fontSize: 18,
@@ -136,8 +145,12 @@ try {
 
 ## Repository
 
-https://github.com/ardevcraft/pdf_text_shaper
+Explore the source, report issues, or contribute on GitHub:
+
+[github.com/ardevcraft/pdf_text_shaper](https://github.com/ardevcraft/pdf_text_shaper)
+
+If this package is useful to you, please consider starring the repository.
 
 ## License
 
-Apache-2.0. Fonts supplied by applications remain under their own licenses.
+This package is licensed under the [Apache License 2.0](LICENSE). Fonts supplied by your application are governed by their respective licenses.

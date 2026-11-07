@@ -122,10 +122,7 @@ final class KhmerTable extends pw.StatelessWidget {
 
     return pw.Table(
       columnWidths: columnWidths,
-      border: pw.TableBorder.all(
-        color: borderColor,
-        width: borderWidth,
-      ),
+      border: pw.TableBorder.all(color: borderColor, width: borderWidth),
       children: [
         for (var rowIndex = 0; rowIndex < data.length; rowIndex++)
           _buildRow(rowIndex),
