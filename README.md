@@ -2,7 +2,7 @@
 <div align="center">
   <a href="https://github.com/ardevcraft/pdf_text_shaper">
     <img
-      src="https://raw.githubusercontent.com/ardevcraft/pdf_text_shaper/main/images/icon.jpg"
+      src="https://github.com/ardevcraft/pdf_text_shaper/blob/master/images/icon.jpg?raw=true"
       alt="pdf_text_shaper icon"
       width="128"
     >

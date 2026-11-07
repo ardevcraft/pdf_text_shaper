@@ -1,6 +1,6 @@
 name: pdf_text_shaper
 description: HarfBuzz-powered complex-script text shaping for the Dart pdf package, with Unicode-preserving PDF output.
-version: 1.1.0
+version: 1.1.1
 homepage: https://github.com/ardevcraft/pdf_text_shaper
 repository: https://github.com/ardevcraft/pdf_text_shaper
 issue_tracker: https://github.com/ardevcraft/pdf_text_shaper/issues
